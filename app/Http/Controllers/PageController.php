@@ -12,37 +12,9 @@ class PageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function dashboardOverview1()
+    public function dashboardOverView()
     {
-        return view('pages/dashboard-overview-1', [
-            // Specify the base layout.
-            // Eg: 'side-menu', 'simple-menu', 'top-menu', 'login'
-            // The default value is 'side-menu'
-
-            // 'layout' => 'side-menu'
-        ]);
-    }
-
-    /**
-     * Show specified view.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function dashboardOverview2()
-    {
-        return view('pages/dashboard-overview-2');
-    }
-
-    /**
-     * Show specified view.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function dashboardOverview3()
-    {
-        return view('pages/dashboard-overview-3');
+        return view('admin.layouts.dashboard');
     }
 
     /**

@@ -27,9 +27,7 @@ Route::middleware('loggedin')->group(function() {
 
 Route::middleware('auth')->group(function() {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/', [PageController::class, 'dashboardOverview1'])->name('dashboard-overview-1');
-    Route::get('dashboard-overview-2-page', [PageController::class, 'dashboardOverview2'])->name('dashboard-overview-2');
-    Route::get('dashboard-overview-3-page', [PageController::class, 'dashboardOverview3'])->name('dashboard-overview-3');
+    Route::get('admin/dashboard', [PageController::class, 'dashboardOverView'])->name('dashboard');
     Route::get('inbox-page', [PageController::class, 'inbox'])->name('inbox');
     Route::get('file-manager-page', [PageController::class, 'fileManager'])->name('file-manager');
     Route::get('point-of-sale-page', [PageController::class, 'pointOfSale'])->name('point-of-sale');

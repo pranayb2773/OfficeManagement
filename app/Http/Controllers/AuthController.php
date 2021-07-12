@@ -15,9 +15,7 @@ class AuthController extends Controller
      */
     public function loginView()
     {
-        return view('login/main', [
-            'layout' => 'login'
-        ]);
+        return view('admin.layouts.login');
     }
 
     /**
@@ -29,7 +27,7 @@ class AuthController extends Controller
     public function login(LoginRequest $request)
     {
         if (!\Auth::attempt([
-            'email' => $request->email, 
+            'email' => $request->email,
             'password' => $request->password
         ])) {
             throw new \Exception('Wrong email or password.');

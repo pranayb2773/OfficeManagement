@@ -15,33 +15,11 @@ class SimpleMenu
         return [
             'dashboard' => [
                 'icon' => 'home',
-                'title' => 'Dashboard',
-                'sub_menu' => [
-                    'dashboard-overview-1' => [
-                        'icon' => '',
-                        'route_name' => 'dashboard-overview-1',
-                        'params' => [
-                            'layout' => 'simple-menu',
-                        ],
-                        'title' => 'Overview 1'
-                    ],
-                    'dashboard-overview-2' => [
-                        'icon' => '',
-                        'route_name' => 'dashboard-overview-2',
-                        'params' => [
-                            'layout' => 'simple-menu',
-                        ],
-                        'title' => 'Overview 2'
-                    ],
-                    'dashboard-overview-3' => [
-                        'icon' => '',
-                        'route_name' => 'dashboard-overview-3',
-                        'params' => [
-                            'layout' => 'simple-menu',
-                        ],
-                        'title' => 'Overview 3'
-                    ]
-                ]
+                'route_name' => 'dashboard',
+                'params' => [
+                    'layout' => 'simple-menu'
+                ],
+                'title' => 'Dashboard'
             ],
             'menu-layout' => [
                 'icon' => 'box',
@@ -49,7 +27,7 @@ class SimpleMenu
                 'sub_menu' => [
                     'side-menu' => [
                         'icon' => '',
-                        'route_name' => 'dashboard-overview-1',
+                        'route_name' => 'dashboard',
                         'params' => [
                             'layout' => 'side-menu'
                         ],
@@ -57,7 +35,7 @@ class SimpleMenu
                     ],
                     'simple-menu' => [
                         'icon' => '',
-                        'route_name' => 'dashboard-overview-1',
+                        'route_name' => 'dashboard',
                         'params' => [
                             'layout' => 'simple-menu'
                         ],
@@ -65,7 +43,7 @@ class SimpleMenu
                     ],
                     'top-menu' => [
                         'icon' => '',
-                        'route_name' => 'dashboard-overview-1',
+                        'route_name' => 'dashboard',
                         'params' => [
                             'layout' => 'top-menu'
                         ],
