@@ -14,6 +14,6 @@ class SideMenu
      */
     public static function menu()
     {
-        return Sitelinks::all()->toArray();
+        return Sitelinks::where('parentId', 0)->get();
     }
 }

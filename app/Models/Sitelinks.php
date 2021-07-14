@@ -12,4 +12,16 @@ class Sitelinks extends Model
     protected $fillable = [
         'title', 'icon', 'url', 'params', 'parentId', 'active'
     ];
+
+    public function parent() {
+
+        return $this->hasOne(Sitelinks::class, 'id', 'parentId');
+
+    }
+
+    public function children() {
+
+        return $this->hasMany(Sitelinks::class, 'parentId', 'id');
+
+    }
 }

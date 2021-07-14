@@ -44,6 +44,21 @@
                     @apply hidden;
                 }
             }
+            .side-menu--active {
+                @apply bg-theme-24 dark:bg-dark-1;
+                .side-menu__icon {
+                    @apply text-white;
+                }
+                .side-menu__title {
+                    @apply text-white font-medium;
+                }
+            }
+            .side-menu__icon {
+                @apply dark:text-gray-500;
+            }
+            .side-menu__title {
+                @apply dark:text-gray-500;
+            }
         }
         > ul {
             @for $i from 1 through 50 {
@@ -51,9 +66,9 @@
                     &.side-nav__devider {
                         @apply opacity-0;
                         animation: 0.4s
-                            intro-devider-animation
-                            ease-in-out
-                            0.33333s;
+                        intro-devider-animation
+                        ease-in-out
+                        0.33333s;
                         animation-fill-mode: forwards;
                         animation-delay: #{$i * 0.1}s;
                     }
@@ -62,17 +77,17 @@
                             @apply opacity-0;
                             transform: translateX(50px);
                             animation: 0.4s
-                                intro-menu-animation
-                                ease-in-out
-                                0.33333s;
+                            intro-menu-animation
+                            ease-in-out
+                            0.33333s;
                             animation-fill-mode: forwards;
                             animation-delay: #{$i * 0.1}s;
                         }
                         &.side-menu--active {
                             animation: 0.4s
-                                intro-active-menu-animation
-                                ease-in-out
-                                0.33333s;
+                            intro-active-menu-animation
+                            ease-in-out
+                            0.33333s;
                             animation-fill-mode: forwards;
                         }
                     }
@@ -85,16 +100,16 @@
                             @apply opacity-0;
                             transform: translateX(50px);
                             animation: 0.2s
-                                intro-submenu-animation
-                                ease-in-out
-                                0.33333s;
+                            intro-submenu-animation
+                            ease-in-out
+                            0.33333s;
                             animation-fill-mode: forwards;
                             animation-delay: #{$i * 0.1}s;
                         }
                     }
                 }
                 border-radius: 10px;
-                @apply hidden bg-theme-6 dark:bg-dark-4;
+                @apply hidden;
                 &.side-menu__sub-open {
                     @apply block;
                 }
@@ -111,7 +126,7 @@
                 }
                 ul {
                     border-radius: 10px;
-                    @apply hidden bg-theme-8 dark:bg-dark-7;
+                    @apply hidden;
                 }
             }
             & > li {
